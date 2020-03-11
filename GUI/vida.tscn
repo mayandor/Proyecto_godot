@@ -1,0 +1,25 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://assets/corazon/frame-5.png" type="Texture" id=1]
+[ext_resource path="res://assets/corazon/frame-8.png" type="Texture" id=2]
+[ext_resource path="res://assets/corazon/frame-3.png" type="Texture" id=3]
+[ext_resource path="res://assets/corazon/frame-7.png" type="Texture" id=4]
+[ext_resource path="res://assets/corazon/frame-1.png" type="Texture" id=5]
+[ext_resource path="res://assets/corazon/frame-6.png" type="Texture" id=6]
+[ext_resource path="res://assets/corazon/frame-4.png" type="Texture" id=7]
+[ext_resource path="res://assets/corazon/frame-2.png" type="Texture" id=8]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 5 ), ExtResource( 8 ), ExtResource( 3 ), ExtResource( 7 ), ExtResource( 1 ), ExtResource( 6 ), ExtResource( 4 ), ExtResource( 2 ) ],
+"loop": true,
+"name": "default",
+"speed": 10.0
+} ]
+
+[node name="AnimatedSprite" type="AnimatedSprite"]
+position = Vector2( 72.5147, 53.5147 )
+scale = Vector2( 0.0952016, 0.103904 )
+frames = SubResource( 1 )
+frame = 4
+playing = true
