@@ -15,9 +15,9 @@ func _ready():
 #func _process(delta):
 #	pass
 
-
 func _on_btnJugar_pressed():
-	pass # Replace with function body.
+	print("presionado")
+	
 func _on_btnTutorial_pressed():
 	pass # Replace with function body.
 func _on_btnSalir_pressed():

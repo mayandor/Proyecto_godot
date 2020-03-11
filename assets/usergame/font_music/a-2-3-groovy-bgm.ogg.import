@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/a-2-3-groovy-bgm.ogg-ccc0e513506b17904e8f4a95473e0766.oggstr"
+
+[deps]
+
+source_file="res://assets/usergame/font_music/a-2-3-groovy-bgm.ogg"
+dest_files=[ "res://.import/a-2-3-groovy-bgm.ogg-ccc0e513506b17904e8f4a95473e0766.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

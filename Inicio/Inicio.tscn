@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://assets/usergame/Fonts/Kenney Pixel Square.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://assets/usergame/PNG/yellow_button04.png" type="Texture" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://assets/usergame/PNG/green_button05.png" type="Texture" id=8]
 [ext_resource path="res://assets/usergame/Font/kenvector_future_thin.ttf" type="DynamicFontData" id=9]
 [ext_resource path="res://Inicio/Control.gd" type="Script" id=10]
+[ext_resource path="res://assets/usergame/font_music/logo.wav" type="AudioStream" id=11]
 
 [sub_resource type="StyleBoxEmpty" id=1]
 
@@ -140,6 +141,11 @@ text = "SALIR"
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="AudioImtro" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 11 )
+volume_db = 2.0
+autoplay = true
 [connection signal="pressed" from="Control/VBoxContainer/btnJugar" to="Control" method="_on_btnJugar_pressed"]
 [connection signal="pressed" from="Control/VBoxContainer/btnTutorial" to="Control" method="_on_btnTutorial_pressed"]
 [connection signal="pressed" from="Control/VBoxContainer/btnSalir" to="Control" method="_on_btnSalir_pressed"]
