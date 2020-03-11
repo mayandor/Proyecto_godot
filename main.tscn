@@ -1,12 +1,17 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Background/background.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Jugador/jugador.tscn" type="PackedScene" id=2]
+[ext_resource path="res://main.gd" type="Script" id=3]
+[ext_resource path="res://spawn_fireball.gd" type="Script" id=4]
+[ext_resource path="res://spawn_obtaculos.gd" type="Script" id=5]
+[ext_resource path="res://spawn_tambor.gd" type="Script" id=6]
 
 [node name="main" type="Node2D" groups=[
 "principal",
 ]]
 position = Vector2( 0, 2 )
+script = ExtResource( 3 )
 
 [node name="background" parent="." instance=ExtResource( 1 )]
 
@@ -16,10 +21,12 @@ position = Vector2( 5.65685, -7.07108 )
 [node name="spawn_obtaculos" type="Position2D" parent="."]
 position = Vector2( 1081.88, 514.774 )
 scale = Vector2( 3, 3 )
+script = ExtResource( 5 )
 
 [node name="spawn_fireball" type="Position2D" parent="."]
 position = Vector2( 149.355, 507.314 )
 scale = Vector2( 3, 3 )
+script = ExtResource( 4 )
 
 [node name="barra_vidas" type="Position2D" parent="." groups=[
 "gui",
@@ -28,6 +35,7 @@ position = Vector2( 41.0122, 43.8406 )
 
 [node name="spawn_tambor" type="Position2D" parent="."]
 position = Vector2( 1094, 350 )
+script = ExtResource( 6 )
 
 [node name="barra_tambor" type="Position2D" parent="." groups=[
 "gui",
