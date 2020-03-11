@@ -1,0 +1,110 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://assets/usergame/Fonts/Kenney Pixel Square.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://assets/usergame/PNG/yellow_button04.png" type="Texture" id=2]
+[ext_resource path="res://assets/usergame/PNG/yellow_button05.png" type="Texture" id=3]
+[ext_resource path="res://assets/usergame/menugame2.jpg" type="Texture" id=4]
+[ext_resource path="res://assets/usergame/PNG/blue_button04.png" type="Texture" id=5]
+[ext_resource path="res://assets/usergame/PNG/blue_button05.png" type="Texture" id=6]
+[ext_resource path="res://assets/usergame/PNG/green_button04.png" type="Texture" id=7]
+[ext_resource path="res://assets/usergame/PNG/green_button05.png" type="Texture" id=8]
+
+[sub_resource type="DynamicFont" id=1]
+size = 22
+font_data = ExtResource( 1 )
+
+[node name="Node" type="Node"]
+
+[node name="Fondo" type="NinePatchRect" parent="."]
+margin_top = 2.0
+margin_right = 1024.0
+margin_bottom = 601.0
+texture = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -96.0
+margin_top = -69.0
+margin_right = 84.0
+margin_bottom = 74.0
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="btnJugar" type="TextureButton" parent="VBoxContainer"]
+margin_right = 180.0
+margin_bottom = 45.0
+rect_min_size = Vector2( 150, 45 )
+texture_normal = ExtResource( 5 )
+texture_pressed = ExtResource( 6 )
+expand = true
+
+[node name="Label" type="Label" parent="VBoxContainer/btnJugar"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -40.0
+margin_top = -18.0
+margin_right = 48.0
+margin_bottom = 18.0
+custom_fonts/font = SubResource( 1 )
+text = "JUGAR"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="btnOpcion" type="TextureButton" parent="VBoxContainer"]
+margin_top = 49.0
+margin_right = 180.0
+margin_bottom = 94.0
+rect_min_size = Vector2( 150, 45 )
+texture_normal = ExtResource( 7 )
+texture_pressed = ExtResource( 8 )
+expand = true
+
+[node name="Label" type="Label" parent="VBoxContainer/btnOpcion"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -65.7864
+margin_top = -19.805
+margin_right = 72.2136
+margin_bottom = 16.195
+custom_fonts/font = SubResource( 1 )
+text = "OPCIONES"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="btnSalir" type="TextureButton" parent="VBoxContainer"]
+margin_top = 98.0
+margin_right = 180.0
+margin_bottom = 143.0
+rect_min_size = Vector2( 150, 45 )
+texture_normal = ExtResource( 2 )
+texture_pressed = ExtResource( 3 )
+expand = true
+
+[node name="Label" type="Label" parent="VBoxContainer/btnSalir"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -41.0
+margin_top = -18.0
+margin_right = 47.0
+margin_bottom = 18.0
+custom_fonts/font = SubResource( 1 )
+text = "SALIR"
+__meta__ = {
+"_edit_use_anchors_": false
+}
