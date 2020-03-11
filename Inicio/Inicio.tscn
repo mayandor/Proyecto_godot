@@ -11,14 +11,14 @@
 [ext_resource path="res://assets/usergame/Font/kenvector_future_thin.ttf" type="DynamicFontData" id=9]
 [ext_resource path="res://Inicio/Control.gd" type="Script" id=10]
 
-[sub_resource type="StyleBoxEmpty" id=3]
+[sub_resource type="StyleBoxEmpty" id=1]
 
 [sub_resource type="DynamicFont" id=2]
 size = 60
 outline_color = Color( 0.898039, 0.0352941, 0.0352941, 1 )
 font_data = ExtResource( 9 )
 
-[sub_resource type="DynamicFont" id=1]
+[sub_resource type="DynamicFont" id=3]
 size = 22
 font_data = ExtResource( 1 )
 
@@ -46,7 +46,7 @@ margin_left = 296.337
 margin_top = 57.6065
 margin_right = 687.337
 margin_bottom = 125.606
-custom_styles/normal = SubResource( 3 )
+custom_styles/normal = SubResource( 1 )
 custom_fonts/font = SubResource( 2 )
 custom_colors/font_color = Color( 0.289706, 0.835294, 0.176471, 1 )
 custom_colors/font_color_shadow = Color( 1, 1, 1, 1 )
@@ -67,7 +67,6 @@ margin_top = 211.0
 margin_right = 576.0
 margin_bottom = 354.0
 __meta__ = {
-"_edit_group_": true,
 "_edit_use_anchors_": false
 }
 
@@ -88,13 +87,13 @@ margin_left = -40.0
 margin_top = -18.0
 margin_right = 48.0
 margin_bottom = 18.0
-custom_fonts/font = SubResource( 1 )
+custom_fonts/font = SubResource( 3 )
 text = "JUGAR"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="btnOpcion" type="TextureButton" parent="Control/VBoxContainer"]
+[node name="btnTutorial" type="TextureButton" parent="Control/VBoxContainer"]
 margin_top = 49.0
 margin_right = 180.0
 margin_bottom = 94.0
@@ -103,7 +102,7 @@ texture_normal = ExtResource( 7 )
 texture_pressed = ExtResource( 8 )
 expand = true
 
-[node name="Label" type="Label" parent="Control/VBoxContainer/btnOpcion"]
+[node name="Label" type="Label" parent="Control/VBoxContainer/btnTutorial"]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -112,8 +111,8 @@ margin_left = -65.7864
 margin_top = -19.805
 margin_right = 72.2136
 margin_bottom = 16.195
-custom_fonts/font = SubResource( 1 )
-text = "OPCIONES"
+custom_fonts/font = SubResource( 3 )
+text = "TUTORIAL"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -136,8 +135,11 @@ margin_left = -41.0
 margin_top = -18.0
 margin_right = 47.0
 margin_bottom = 18.0
-custom_fonts/font = SubResource( 1 )
+custom_fonts/font = SubResource( 3 )
 text = "SALIR"
 __meta__ = {
 "_edit_use_anchors_": false
 }
+[connection signal="pressed" from="Control/VBoxContainer/btnJugar" to="Control" method="_on_btnJugar_pressed"]
+[connection signal="pressed" from="Control/VBoxContainer/btnTutorial" to="Control" method="_on_btnTutorial_pressed"]
+[connection signal="pressed" from="Control/VBoxContainer/btnSalir" to="Control" method="_on_btnSalir_pressed"]

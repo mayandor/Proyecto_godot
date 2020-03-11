@@ -14,3 +14,11 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
+
+
+func _on_btnJugar_pressed():
+	pass # Replace with function body.
+func _on_btnTutorial_pressed():
+	pass # Replace with function body.
+func _on_btnSalir_pressed():
+	get_tree().quit()
