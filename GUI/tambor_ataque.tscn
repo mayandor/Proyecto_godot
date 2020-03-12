@@ -1,16 +1,22 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=7 format=2]
 
-[ext_resource path="res://assets/personajes/Juancito/tambor.png" type="Texture" id=1]
+[ext_resource path="res://assets/tambor_animacion/tambor_arriba3.png" type="Texture" id=1]
+[ext_resource path="res://assets/tambor_animacion/tambor_arriba1.png" type="Texture" id=2]
+[ext_resource path="res://assets/tambor_animacion/tambor_arriba4.png" type="Texture" id=3]
+[ext_resource path="res://assets/tambor_animacion/tambor_arriba2.png" type="Texture" id=4]
+[ext_resource path="res://assets/tambor_animacion/tambor_arriba5.png" type="Texture" id=5]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ ExtResource( 1 ) ],
+"frames": [ ExtResource( 2 ), ExtResource( 4 ), ExtResource( 1 ), ExtResource( 3 ), ExtResource( 5 ) ],
 "loop": true,
 "name": "default",
-"speed": 5.0
+"speed": 10.0
 } ]
 
 [node name="AnimatedSprite" type="AnimatedSprite"]
 position = Vector2( 75.8427, 145.245 )
 scale = Vector2( 0.0589005, 0.0584179 )
 frames = SubResource( 1 )
+frame = 3
+playing = true

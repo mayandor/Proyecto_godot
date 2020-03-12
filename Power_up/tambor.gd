@@ -16,5 +16,10 @@ func _process(delta):
 func _on_tambor_area_entered(area):
 	if area.name == "jugador":
 		main.add_tambor()
-		hide()
+		$tambor.animation = "tomar"
+		$tambor.scale.x = 0.287
+		$tambor.scale.y = 0.455
+		$tambor.position.x = 0.332
+		$tambor.position.y = -218.775
+
 		

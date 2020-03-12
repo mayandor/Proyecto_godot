@@ -16,7 +16,7 @@ script = ExtResource( 3 )
 [node name="background" parent="." instance=ExtResource( 1 )]
 
 [node name="jugador" parent="." instance=ExtResource( 2 )]
-position = Vector2( 5.65685, -7.07108 )
+position = Vector2( 53.6568, -4.07108 )
 
 [node name="spawn_obtaculos" type="Position2D" parent="."]
 position = Vector2( 1081.88, 514.774 )
@@ -24,7 +24,7 @@ scale = Vector2( 3, 3 )
 script = ExtResource( 5 )
 
 [node name="spawn_fireball" type="Position2D" parent="."]
-position = Vector2( 149.355, 507.314 )
+position = Vector2( 166.355, 507.314 )
 scale = Vector2( 3, 3 )
 script = ExtResource( 4 )
 

@@ -14,14 +14,9 @@
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ ExtResource( 6 ), ExtResource( 5 ), ExtResource( 4 ), ExtResource( 2 ), ExtResource( 3 ) ],
+"frames": [ ExtResource( 10 ) ],
 "loop": true,
-"name": "caminando",
-"speed": 10.0
-}, {
-"frames": [ ExtResource( 8 ), ExtResource( 7 ) ],
-"loop": false,
-"name": "ataque",
+"name": "lastimado",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 11 ), ExtResource( 10 ), ExtResource( 9 ) ],
@@ -29,10 +24,15 @@ animations = [ {
 "name": "down",
 "speed": 12.0
 }, {
-"frames": [ ExtResource( 10 ) ],
-"loop": true,
-"name": "lastimado",
+"frames": [ ExtResource( 8 ), ExtResource( 7 ) ],
+"loop": false,
+"name": "ataque",
 "speed": 5.0
+}, {
+"frames": [ ExtResource( 6 ), ExtResource( 5 ), ExtResource( 4 ), ExtResource( 2 ), ExtResource( 3 ) ],
+"loop": true,
+"name": "caminando",
+"speed": 10.0
 } ]
 
 [sub_resource type="RectangleShape2D" id=2]
@@ -42,14 +42,14 @@ extents = Vector2( 68.0722, 38.1709 )
 script = ExtResource( 1 )
 
 [node name="jugador_sprite" type="AnimatedSprite" parent="."]
-position = Vector2( 74.0517, 492.605 )
+position = Vector2( 106.579, 493.312 )
 scale = Vector2( 0.148118, 0.1397 )
 frames = SubResource( 1 )
 animation = "caminando"
-frame = 1
+frame = 2
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 71.068, 493.705 )
+position = Vector2( 103.595, 494.412 )
 scale = Vector2( 0.6, 1.9 )
 shape = SubResource( 2 )
