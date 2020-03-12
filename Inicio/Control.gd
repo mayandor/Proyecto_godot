@@ -17,7 +17,6 @@ func _ready():
 
 func _on_btnJugar_pressed():
 	print("presionado")
-	
 func _on_btnTutorial_pressed():
 	pass # Replace with function body.
 func _on_btnSalir_pressed():
