@@ -1,3 +1,4 @@
+CREATE DATABASE gamegodot
 CREATE TABLE preguntas (
     id INT(11) NOT NULL AUTO_INCREMENT,
     pregunta VARCHAR(250) DEFAULT NULL,
