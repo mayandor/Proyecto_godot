@@ -25,26 +25,26 @@ animations = [ {
 } ]
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 21.0685, 41.891 )
+extents = Vector2( 10.5248, 21.752 )
 
 [node name="tnt" type="Area2D"]
 pause_mode = 1
-position = Vector2( 1131.71, 522.359 )
+position = Vector2( 1083.7, 519.787 )
 script = ExtResource( 2 )
 __meta__ = {
+"_edit_group_": true,
 "_edit_horizontal_guides_": [ 4.0 ]
 }
 
 [node name="tnt" type="AnimatedSprite" parent="."]
-position = Vector2( 24.9007, -37.0865 )
+position = Vector2( 0.0371094, 6.63965 )
 scale = Vector2( 0.146894, 0.15013 )
 frames = SubResource( 1 )
-animation = "explosion"
-frame = 4
+animation = "sin_explotar"
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 3.25671, 6.87451 )
+position = Vector2( -0.172611, 0.872894 )
 shape = SubResource( 2 )
 [connection signal="area_entered" from="." to="." method="_on_tnt_area_entered"]
 [connection signal="area_exited" from="." to="." method="_on_tnt_area_exited"]

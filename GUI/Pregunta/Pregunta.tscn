@@ -1,0 +1,135 @@
+[gd_scene load_steps=19 format=2]
+
+[ext_resource path="res://assets/gui/png/Window.png" type="Texture" id=1]
+[ext_resource path="res://Fuentes/Candy_Randy/candyrandy.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://GUI/Pregunta/Pregunta.gd" type="Script" id=3]
+[ext_resource path="res://Fuentes/Porky_s/porkh.ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://assets/gui/botones/boton_lechuga.png" type="Texture" id=5]
+[ext_resource path="res://assets/gui/botones/boton_plomo.png" type="Texture" id=6]
+[ext_resource path="res://assets/gui/botones/boton_Verde.png" type="Texture" id=7]
+[ext_resource path="res://assets/gui/botones/boton_rojo.png" type="Texture" id=8]
+
+[sub_resource type="DynamicFont" id=1]
+size = 70
+outline_color = Color( 0.921569, 0.890196, 0.866667, 1 )
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 36
+extra_spacing_char = 5
+font_data = ExtResource( 4 )
+
+[sub_resource type="StyleBoxLine" id=3]
+color = Color( 0.870588, 0.705882, 0.584314, 1 )
+
+[sub_resource type="StyleBoxLine" id=4]
+color = Color( 0.870588, 0.705882, 0.584314, 1 )
+
+[sub_resource type="StyleBoxLine" id=5]
+color = Color( 0.870588, 0.705882, 0.584314, 1 )
+
+[sub_resource type="StyleBoxLine" id=6]
+
+[sub_resource type="StyleBoxLine" id=7]
+
+[sub_resource type="StyleBoxLine" id=8]
+color = Color( 0.870588, 0.705882, 0.584314, 1 )
+
+[sub_resource type="DynamicFont" id=9]
+size = 35
+outline_color = Color( 0.870588, 0.705882, 0.584314, 1 )
+extra_spacing_char = 7
+extra_spacing_space = 2
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=10]
+size = 52
+extra_spacing_char = 3
+font_data = ExtResource( 2 )
+
+[node name="Pregunta" type="Sprite"]
+position = Vector2( 522.513, 306.745 )
+scale = Vector2( 0.577829, 0.621572 )
+texture = ExtResource( 1 )
+vframes = 5
+hframes = 4
+frame = 2
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Label" type="Label" parent="."]
+margin_left = -197.535
+margin_top = -432.892
+margin_right = 209.465
+margin_bottom = -361.892
+grow_horizontal = 0
+grow_vertical = 2
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.870588, 0.705882, 0.584314, 1 )
+text = "PREGUNTA"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="txt_pregunta" type="Label" parent="."]
+margin_left = -368.0
+margin_top = -140.0
+margin_right = 337.0
+margin_bottom = -4.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0.980392, 0.964706, 0.952941, 1 )
+text = "ESTE ES UN TEXTO DE PREGUNTA PARA LA PRUEBA JEJEJE?"
+align = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ItemList" type="ItemList" parent="."]
+margin_left = -257.433
+margin_top = 51.0508
+margin_right = 242.567
+margin_bottom = 225.051
+custom_styles/cursor = SubResource( 3 )
+custom_styles/selected_focus = SubResource( 4 )
+custom_styles/bg_focus = SubResource( 5 )
+custom_styles/cursor_unfocused = SubResource( 6 )
+custom_styles/selected = SubResource( 7 )
+custom_styles/bg = SubResource( 8 )
+custom_fonts/font = SubResource( 9 )
+custom_colors/guide_color = Color( 0.870588, 0.705882, 0.584314, 1 )
+custom_colors/font_color_selected = Color( 0.980392, 0.964706, 0.952941, 1 )
+custom_colors/font_color = Color( 0.686275, 0.501961, 0.360784, 1 )
+max_text_lines = 3
+auto_height = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="btn_continuar" type="TextureButton" parent="."]
+margin_left = -194.574
+margin_top = 308.0
+margin_right = 176.426
+margin_bottom = 424.0
+texture_normal = ExtResource( 5 )
+texture_pressed = ExtResource( 8 )
+texture_hover = ExtResource( 7 )
+texture_disabled = ExtResource( 6 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="btn_continuar"]
+margin_left = 21.0
+margin_top = 35.0
+margin_right = 353.0
+margin_bottom = 87.0
+custom_fonts/font = SubResource( 10 )
+custom_colors/font_color = Color( 0.980392, 0.964706, 0.952941, 1 )
+text = "CONTINUAR"
+__meta__ = {
+"_edit_use_anchors_": false
+}

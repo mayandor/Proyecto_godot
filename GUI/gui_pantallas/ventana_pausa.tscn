@@ -1,0 +1,130 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://assets/gui/botones/boton_Verde.png" type="Texture" id=1]
+[ext_resource path="res://assets/gui/botones/boton_lechuga.png" type="Texture" id=2]
+[ext_resource path="res://assets/gui/botones/boton_rojo.png" type="Texture" id=3]
+[ext_resource path="res://Fuentes/Candy_Randy/candyrandy.ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://assets/gui/botones/sonido_lechuga.png" type="Texture" id=5]
+[ext_resource path="res://assets/gui/botones/sonido_verde.png" type="Texture" id=6]
+[ext_resource path="res://assets/gui/png/Window_pausa.png" type="Texture" id=7]
+[ext_resource path="res://Fuentes/Porky_s/porkh.ttf" type="DynamicFontData" id=8]
+[ext_resource path="res://GUI/gui_pantallas/ventana_pausa.gd" type="Script" id=9]
+
+[sub_resource type="DynamicFont" id=1]
+size = 54
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 26
+extra_spacing_char = 8
+font_data = ExtResource( 8 )
+
+[node name="Sprite" type="Sprite"]
+position = Vector2( 496.021, 287.111 )
+scale = Vector2( 0.791403, 0.752625 )
+texture = ExtResource( 7 )
+script = ExtResource( 9 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = -95.1993
+margin_top = -284.472
+margin_right = 91.8007
+margin_bottom = -229.472
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.870588, 0.705882, 0.584314, 1 )
+text = "PAUSA"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="btn_sonido" type="TextureButton" parent="."]
+margin_left = -51.197
+margin_top = -158.636
+margin_right = 42.803
+margin_bottom = -51.6359
+texture_normal = ExtResource( 6 )
+texture_hover = ExtResource( 5 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="btn_volver" type="TextureButton" parent="."]
+margin_left = -109.067
+margin_top = -17.2249
+margin_right = 110.933
+margin_bottom = 51.7751
+texture_normal = ExtResource( 2 )
+texture_pressed = ExtResource( 3 )
+texture_hover = ExtResource( 1 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="btn_volver"]
+margin_left = 45.4836
+margin_top = 15.6156
+margin_right = 178.484
+margin_bottom = 53.6156
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 1, 0.988235, 0.980392, 1 )
+text = "VOLVER"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="btn_reiniciar" type="TextureButton" parent="."]
+margin_left = -106.9
+margin_top = 76.1878
+margin_right = 113.1
+margin_bottom = 145.188
+texture_normal = ExtResource( 2 )
+texture_pressed = ExtResource( 3 )
+texture_hover = ExtResource( 1 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="btn_reiniciar"]
+anchor_left = -0.0197698
+anchor_top = -0.114043
+anchor_right = -0.00844421
+anchor_bottom = 1.02831
+margin_left = 25.325
+margin_top = 23.6574
+margin_right = 204.833
+margin_bottom = -15.165
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 1, 0.988235, 0.980392, 1 )
+text = "REINICIAR"
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="btn_menu" type="TextureButton" parent="."]
+margin_left = -105.817
+margin_top = 161.626
+margin_right = 114.183
+margin_bottom = 230.626
+texture_normal = ExtResource( 2 )
+texture_pressed = ExtResource( 3 )
+texture_hover = ExtResource( 1 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="btn_menu"]
+margin_left = 55.0427
+margin_top = 14.1796
+margin_right = 164.043
+margin_bottom = 53.1796
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 1, 0.988235, 0.980392, 1 )
+text = "MENÚ"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="btn_volver" to="." method="_on_btn_volver_pressed"]

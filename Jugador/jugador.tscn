@@ -19,11 +19,6 @@ animations = [ {
 "name": "ataque",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 6 ), ExtResource( 5 ), ExtResource( 4 ), ExtResource( 2 ), ExtResource( 3 ) ],
-"loop": true,
-"name": "caminando",
-"speed": 10.0
-}, {
 "frames": [ ExtResource( 11 ), ExtResource( 10 ), ExtResource( 9 ) ],
 "loop": false,
 "name": "down",
@@ -33,6 +28,11 @@ animations = [ {
 "loop": true,
 "name": "lastimado",
 "speed": 5.0
+}, {
+"frames": [ ExtResource( 6 ), ExtResource( 5 ), ExtResource( 4 ), ExtResource( 2 ), ExtResource( 3 ) ],
+"loop": true,
+"name": "caminando",
+"speed": 10.0
 } ]
 
 [sub_resource type="RectangleShape2D" id=2]

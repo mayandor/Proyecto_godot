@@ -16,11 +16,11 @@ func _ready():
 	crear_vidas()
 	crear_tambores()
 func _process(delta):
+	var ventana = preload("res://GUI/gui_pantallas/ventana_pausa.tscn") 
 	if Input.is_action_just_pressed("ui_accept"):
-		if get_tree().paused == false:
+		if	get_tree().paused == false:
+			get_tree().get_nodes_in_group("principal")[0].add_child(ventana.instance())
 			get_tree().paused = true
-		else:
-			get_tree().paused = false
 	
 func crear_vidas():
 	for i in vidas:

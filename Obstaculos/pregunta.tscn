@@ -36,7 +36,7 @@ position = Vector2( 9.21876, 17.1567 )
 scale = Vector2( 0.888029, 1.06143 )
 frames = SubResource( 1 )
 animation = "roca"
-frame = 6
+frame = 8
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

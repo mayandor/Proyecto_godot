@@ -5,7 +5,7 @@ var pos = position
 var piso = pos
 var gravedad = 4000
 var velocidad = Vector2()
-var velocidad_salto = -1200
+var velocidad_salto = -1300
 var modificador_gravedad = 2.3
 onready var main = get_node("/root/main")
 # para ataque
