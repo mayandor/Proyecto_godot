@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Background/background.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Jugador/jugador.tscn" type="PackedScene" id=2]
@@ -6,40 +6,52 @@
 [ext_resource path="res://spawn_fireball.gd" type="Script" id=4]
 [ext_resource path="res://spawn_obtaculos.gd" type="Script" id=5]
 [ext_resource path="res://spawn_tambor.gd" type="Script" id=6]
+[ext_resource path="res://assets/usergame/PNG/blue_panel.png" type="Texture" id=7]
+
+[sub_resource type="Animation" id=1]
+resource_name = "mover"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, 500 ) ]
+}
 
 [node name="main" type="Node2D" groups=[
 "principal",
 ]]
-pause_mode = 2
 position = Vector2( 0, 2 )
 script = ExtResource( 3 )
 
 [node name="background" parent="." instance=ExtResource( 1 )]
-pause_mode = 1
+position = Vector2( -155.789, 46.3158 )
 
 [node name="jugador" parent="." instance=ExtResource( 2 )]
-pause_mode = 1
-position = Vector2( 55.6568, -4.07108 )
+position = Vector2( 53.6568, -4.07108 )
 
 [node name="spawn_obtaculos" type="Position2D" parent="."]
-pause_mode = 1
 position = Vector2( 1081.88, 514.774 )
 scale = Vector2( 3, 3 )
 script = ExtResource( 5 )
 
 [node name="spawn_fireball" type="Position2D" parent="."]
-pause_mode = 1
-position = Vector2( 212.355, 491.314 )
+position = Vector2( 166.355, 507.314 )
 scale = Vector2( 3, 3 )
 script = ExtResource( 4 )
 
 [node name="barra_vidas" type="Position2D" parent="." groups=[
 "gui",
 ]]
-position = Vector2( 41.0122, 43.8406 )
+position = Vector2( 41.0122, 46.4253 )
 
 [node name="spawn_tambor" type="Position2D" parent="."]
-pause_mode = 1
 position = Vector2( 1094, 350 )
 script = ExtResource( 6 )
 
@@ -47,4 +59,29 @@ script = ExtResource( 6 )
 "gui",
 ]]
 position = Vector2( 42, 104 )
+
+[node name="pregunta" type="Node2D" parent="."]
+
+[node name="TextureRect" type="TextureRect" parent="pregunta"]
+margin_top = -2.0
+margin_right = 40.0
+margin_bottom = 38.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureButton" type="TextureButton" parent="pregunta"]
+margin_left = 251.07
+margin_top = -388.513
+margin_right = 763.07
+margin_bottom = -50.5134
+texture_normal = ExtResource( 7 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="anim" type="AnimationPlayer" parent="pregunta"]
+pause_mode = 2
+anims/mover = SubResource( 1 )
 [connection signal="fuego" from="jugador" to="." method="_on_jugador_fuego"]

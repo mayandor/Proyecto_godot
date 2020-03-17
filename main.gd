@@ -35,8 +35,8 @@ func quitar_vidas():
 		vidas -= 1
 		lista_vidas[vidas].queue_free()
 	else:
-		print("moriste")
-
+		#get_tree().paused = true
+		print("game over")
 func crear_tambores():
 	for i in tambores:
 		var nuevo_tambor = tambor.instance()
@@ -60,9 +60,12 @@ func quitar_tambores():
 		lista_tambores[tambores].queue_free()
 		lista_tambores.resize(tambores)
 	else:
-		
 		print("sin tambor")
 				
 func _on_jugador_fuego():
 	$spawn_fireball.crearFuego()
 	quitar_tambores()
+
+func panel_pregunta():
+	$pregunta/anim.play("mover")
+	get_tree().paused = true
