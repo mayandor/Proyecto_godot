@@ -10,21 +10,26 @@
 [node name="main" type="Node2D" groups=[
 "principal",
 ]]
+pause_mode = 2
 position = Vector2( 0, 2 )
 script = ExtResource( 3 )
 
 [node name="background" parent="." instance=ExtResource( 1 )]
+pause_mode = 1
 
 [node name="jugador" parent="." instance=ExtResource( 2 )]
-position = Vector2( 53.6568, -4.07108 )
+pause_mode = 1
+position = Vector2( 55.6568, -4.07108 )
 
 [node name="spawn_obtaculos" type="Position2D" parent="."]
+pause_mode = 1
 position = Vector2( 1081.88, 514.774 )
 scale = Vector2( 3, 3 )
 script = ExtResource( 5 )
 
 [node name="spawn_fireball" type="Position2D" parent="."]
-position = Vector2( 166.355, 507.314 )
+pause_mode = 1
+position = Vector2( 212.355, 491.314 )
 scale = Vector2( 3, 3 )
 script = ExtResource( 4 )
 
@@ -34,6 +39,7 @@ script = ExtResource( 4 )
 position = Vector2( 41.0122, 43.8406 )
 
 [node name="spawn_tambor" type="Position2D" parent="."]
+pause_mode = 1
 position = Vector2( 1094, 350 )
 script = ExtResource( 6 )
 

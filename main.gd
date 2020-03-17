@@ -15,7 +15,13 @@ var lista_tambores = []
 func _ready():
 	crear_vidas()
 	crear_tambores()
-
+func _process(delta):
+	if Input.is_action_just_pressed("ui_accept"):
+		if get_tree().paused == false:
+			get_tree().paused = true
+		else:
+			get_tree().paused = false
+	
 func crear_vidas():
 	for i in vidas:
 		var nueva_vida = vida.instance()

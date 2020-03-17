@@ -1,6 +1,6 @@
 extends Position2D
 
-var enemigos = [preload("res://Obstaculos/tnt.tscn"), preload ("res://Obstaculos/roca.tscn"), preload("res://Obstaculos/bala.tscn")]
+var enemigos = [preload("res://Obstaculos/tnt.tscn"), preload ("res://Obstaculos/pregunta.tscn"), preload("res://Obstaculos/bala.tscn")]
 
 var tiempo = 0.0
 var intervalo = 3

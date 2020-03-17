@@ -41,6 +41,7 @@ animations = [ {
 radius = 38.7674
 
 [node name="tambor" type="Area2D"]
+pause_mode = 1
 position = Vector2( 1103.09, 315.37 )
 script = ExtResource( 2 )
 

@@ -14,16 +14,6 @@
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ ExtResource( 10 ) ],
-"loop": true,
-"name": "lastimado",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 11 ), ExtResource( 10 ), ExtResource( 9 ) ],
-"loop": false,
-"name": "down",
-"speed": 12.0
-}, {
 "frames": [ ExtResource( 8 ), ExtResource( 7 ) ],
 "loop": false,
 "name": "ataque",
@@ -33,6 +23,16 @@ animations = [ {
 "loop": true,
 "name": "caminando",
 "speed": 10.0
+}, {
+"frames": [ ExtResource( 11 ), ExtResource( 10 ), ExtResource( 9 ) ],
+"loop": false,
+"name": "down",
+"speed": 12.0
+}, {
+"frames": [ ExtResource( 10 ) ],
+"loop": true,
+"name": "lastimado",
+"speed": 5.0
 } ]
 
 [sub_resource type="RectangleShape2D" id=2]

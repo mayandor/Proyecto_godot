@@ -10,6 +10,7 @@ radius = 23.0643
 extents = Vector2( 127.384, 114.748 )
 
 [node name="bala" type="Area2D"]
+pause_mode = 1
 position = Vector2( -1.41418, -19.799 )
 script = ExtResource( 2 )
 __meta__ = {
