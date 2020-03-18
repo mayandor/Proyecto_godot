@@ -68,4 +68,10 @@ func _on_jugador_fuego():
 
 func panel_pregunta():
 	$pregunta/anim.play("mover")
+	print("pausa")
 	get_tree().paused = true
+
+func _on_Button_pressed():
+	print("sin pausa")
+	$pregunta/anim1.play("regresar")
+	get_tree().paused = false
