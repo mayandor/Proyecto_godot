@@ -5,7 +5,6 @@ export var vidas = 3
 var offset_vida = 80
 var vida = preload("res://GUI/vida.tscn")
 var lista_vidas = []
-
 # para los ataques de tambor
 export var tambores = 3
 
@@ -66,12 +65,26 @@ func _on_jugador_fuego():
 	$spawn_fireball.crearFuego()
 	quitar_tambores()
 
-func panel_pregunta():
+func panel_pregunta():	
+	$HTTPRequest.request("http://localhost:3000/api/godot")
 	$pregunta/anim.play("mover")
 	print("pausa")
 	get_tree().paused = true
 
 func _on_Button_pressed():
 	print("sin pausa")
-	$pregunta/anim1.play("regresar")
+	$pregunta/anim.play("regresar")
 	get_tree().paused = false
+
+func _on_HTTPRequest_request_completed(result, response_code, headers, body):
+	#mediante http recibe los datos de la base de datos en formato json
+	var json = JSON.parse(body.get_string_from_utf8())
+	var resultado = (json.result)
+	print(resultado)	
+	var labelimpresion:RichTextLabel = get_node("pregunta/RichTextLabel")
+	labelimpresion.clear()
+	for res in resultado:
+		labelimpresion.text += "Id :" + var2str(res["id"]) +"\n"
+		labelimpresion.text += "Pregunta :" + var2str(res["pregunta"]) +"\n"
+		labelimpresion.text += "Respuesta :" + var2str(res["respuesta"]) +"\n"
+		labelimpresion.text += "---------\n"

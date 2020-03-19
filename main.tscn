@@ -47,7 +47,7 @@ position = Vector2( 0, 2 )
 script = ExtResource( 3 )
 
 [node name="background" parent="." instance=ExtResource( 1 )]
-position = Vector2( -155.789, 46.3158 )
+position = Vector2( -156.487, 46.3158 )
 
 [node name="jugador" parent="." instance=ExtResource( 2 )]
 position = Vector2( 53.6568, -4.07108 )
@@ -77,7 +77,7 @@ script = ExtResource( 6 )
 position = Vector2( 42, 104 )
 
 [node name="pregunta" type="Node2D" parent="."]
-position = Vector2( 0, 500 )
+position = Vector2( 0, 10 )
 
 [node name="TextureRect" type="TextureRect" parent="pregunta"]
 margin_top = -2.0
@@ -101,20 +101,30 @@ __meta__ = {
 [node name="anim" type="AnimationPlayer" parent="pregunta"]
 pause_mode = 2
 anims/mover = SubResource( 1 )
+anims/regresar = SubResource( 2 )
 
 [node name="Button" type="Button" parent="pregunta"]
 pause_mode = 2
 margin_left = 469.001
-margin_top = -249.484
+margin_top = -148.817
 margin_right = 554.001
-margin_bottom = -218.484
+margin_bottom = -117.817
 text = "seguir"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="anim1" type="AnimationPlayer" parent="pregunta"]
+[node name="RichTextLabel" type="RichTextLabel" parent="pregunta"]
 pause_mode = 2
-anims/regresar = SubResource( 2 )
+margin_left = 435.112
+margin_top = -355.81
+margin_right = 586.112
+margin_bottom = -189.81
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HTTPRequest" type="HTTPRequest" parent="."]
 [connection signal="fuego" from="jugador" to="." method="_on_jugador_fuego"]
 [connection signal="pressed" from="pregunta/Button" to="." method="_on_Button_pressed"]
+[connection signal="request_completed" from="HTTPRequest" to="." method="_on_HTTPRequest_request_completed"]
