@@ -13,16 +13,16 @@ func _process(delta):
 	if tiempo_vida <= 0:
 		queue_free()
 
-
 func _on_roca_area_entered(area):
 	if area.name == "jugador":
 		jugador.choca()
 		main.quitar_vidas()
 		hide()
-		print("pregunta")
+		main.panel_pregunta()
 	elif area.name == "fireball":
 		queue_free()
 
-
 func _on_roca_area_exited(area):
 	jugador.normalidad()
+func mostrar_panel():
+	print("hasta a aqui")

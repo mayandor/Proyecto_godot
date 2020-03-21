@@ -35,5 +35,6 @@ func _on_tnt_area_entered(area):
 		queue_free()
 
 
+# warning-ignore:unused_argument
 func _on_tnt_area_exited(area):
 	jugador.normalidad()

@@ -15,4 +15,3 @@ func _physics_process(delta):
 		var c = rand_range(0, power_ups.size())
 		get_parent().add_child(power_ups[c].instance())
 		intervalo = rand_range(intervalo_min, intervalo_max)
-		

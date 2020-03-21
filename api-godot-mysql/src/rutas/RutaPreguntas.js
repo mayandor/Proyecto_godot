@@ -14,5 +14,17 @@ ruta.get('/api/godot/',(req,res) => {
         }
       });
 });
+// get id
+ruta.get('/api/godot/:id', (req,res) => {
+  const { id } = req.params;
+  console.log(id);
+  mysqlConnection.query('SELECT * FROM preguntas WHERE id = ?', [id], (err, rows) => {
+    if (!err) {
+      res.json(rows[0]);
+    } else {
+      console.log(err);
+    }
+  });
+});
 
 module.exports = ruta;
