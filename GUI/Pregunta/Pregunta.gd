@@ -16,3 +16,8 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
+
+
+#func _on_anim_pregunta_animation_finished(anim_name):
+#	anim_name == "salida"
+#	queue_free()

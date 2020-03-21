@@ -1,0 +1,35 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Data_Base/prueba.gd" type="Script" id=1]
+
+[node name="prueba" type="Node"]
+script = ExtResource( 1 )
+
+[node name="Panel" type="Panel" parent="."]
+margin_left = 348.482
+margin_top = 58.7069
+margin_right = 655.482
+margin_bottom = 436.707
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ItemList" type="ItemList" parent="Panel"]
+margin_left = 87.5867
+margin_top = 164.653
+margin_right = 219.587
+margin_bottom = 290.653
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Panel"]
+margin_left = 50.0
+margin_top = 34.0
+margin_right = 256.0
+margin_bottom = 144.0
+text = "PRUEBA"
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}

@@ -15,6 +15,8 @@ var lista_tambores = []
 func _ready():
 	crear_vidas()
 	crear_tambores()
+	#play_musica()
+	
 func _process(delta):
 	var ventana = preload("res://GUI/gui_pantallas/ventana_pausa.tscn") 
 	if Input.is_action_just_pressed("ui_accept"):
@@ -66,3 +68,17 @@ func quitar_tambores():
 func _on_jugador_fuego():
 	$spawn_fireball.crearFuego()
 	quitar_tambores()
+
+#Cuando ternina la cancion
+func _on_musica_principal_finished():
+	$musica_principal.play()
+
+func parar_musica():
+	$musica_principal.stop()
+
+func play_musica():
+	$musica_principal.play()
+
+
+func _on_ambiente_finished():
+	$ambiente.play()

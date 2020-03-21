@@ -17,7 +17,7 @@ animations = [ {
 "frames": [ ExtResource( 6 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 2 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 7 ), ExtResource( 11 ) ],
 "loop": true,
 "name": "roca",
-"speed": 5.0
+"speed": 4.0
 } ]
 
 [sub_resource type="RectangleShape2D" id=2]
@@ -36,7 +36,7 @@ position = Vector2( 9.21876, 17.1567 )
 scale = Vector2( 0.888029, 1.06143 )
 frames = SubResource( 1 )
 animation = "roca"
-frame = 8
+speed_scale = 2.0
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

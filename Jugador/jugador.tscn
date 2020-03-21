@@ -32,7 +32,7 @@ animations = [ {
 "frames": [ ExtResource( 6 ), ExtResource( 5 ), ExtResource( 4 ), ExtResource( 2 ), ExtResource( 3 ) ],
 "loop": true,
 "name": "caminando",
-"speed": 10.0
+"speed": 7.0
 } ]
 
 [sub_resource type="RectangleShape2D" id=2]
@@ -46,6 +46,8 @@ position = Vector2( 106.579, 493.312 )
 scale = Vector2( 0.148118, 0.1397 )
 frames = SubResource( 1 )
 animation = "caminando"
+frame = 4
+speed_scale = 2.0
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
